@@ -3,7 +3,7 @@ import { View, Text } from "react-native";
 import { createStackNavigator } from "@react-navigation/stack";
 import TabNavigator from "./TabNavigator";
 
-type RooStackParamList = {
+export type RooStackParamList = {
   Main: undefined;
   MyModal: { userId: string; name: string };
   Order: any;
