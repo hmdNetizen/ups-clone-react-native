@@ -4,13 +4,13 @@ import { createStackNavigator } from "@react-navigation/stack";
 import TabNavigator from "./TabNavigator";
 import ModalScreen from "../screens/ModalScreen";
 
-export type RooStackParamList = {
+export type RootStackParamList = {
   Main: undefined;
   MyModal: { userId: string; name: string };
   Order: any;
 };
 
-const RootStack = createStackNavigator<RooStackParamList>();
+const RootStack = createStackNavigator<RootStackParamList>();
 
 const RootNavigator = () => {
   return (

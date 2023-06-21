@@ -13,7 +13,7 @@ import {
 import { BottomTabNavigationProp } from "@react-navigation/bottom-tabs";
 import { TabStackParamList } from "../navigator/TabNavigator";
 import { StackNavigationProp } from "@react-navigation/stack";
-import { RooStackParamList } from "../navigator/RootNavigator";
+import { RootStackParamList } from "../navigator/RootNavigator";
 import { Image, Input } from "@rneui/themed";
 import { useQuery } from "@apollo/client";
 import { GET_CUSTOMERS } from "../graphql/queries";
@@ -21,7 +21,7 @@ import CustomerCard from "../components/CustomerCard";
 
 export type CustomerScreenNavigationProps = CompositeNavigationProp<
   BottomTabNavigationProp<TabStackParamList, "Customers">,
-  StackNavigationProp<RooStackParamList>
+  StackNavigationProp<RootStackParamList>
 >;
 
 const CustomerScreen = () => {
