@@ -49,10 +49,12 @@ const ModalScreen = () => {
         >
           <Icon name="closecircle" type="antdesign" />
         </TouchableOpacity>
-        <View>
-          <View>
-            <Text>{name}</Text>
-            <Text>deliveries</Text>
+        <View style={{ marginTop: 10 }}>
+          <View className="py-5 border-b-2 border-[#59C1CC]">
+            <Text className="text-xl font-bold text-center text-[#59C1CC]">
+              {name}
+            </Text>
+            <Text className="text-sm text-center font-bold">deliveries</Text>
           </View>
         </View>
       </View>
@@ -60,6 +62,7 @@ const ModalScreen = () => {
         data={orders}
         keyExtractor={(item) => item.trackingId}
         renderItem={({ item: order }) => <DeliveryCard order={order} />}
+        contentContainerStyle={{ paddingBottom: 200 }}
       />
     </SafeAreaView>
   );
