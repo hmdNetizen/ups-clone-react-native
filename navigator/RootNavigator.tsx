@@ -8,7 +8,10 @@ import OrderScreen from "../screens/OrderScreen";
 export type RootStackParamList = {
   Main: undefined;
   MyModal: { userId: string; name: string };
-  Order: any;
+  Orders: any;
+  Order: {
+    order: Order;
+  };
 };
 
 const RootStack = createStackNavigator<RootStackParamList>();
@@ -27,11 +30,7 @@ const RootNavigator = () => {
         />
       </RootStack.Group>
       <RootStack.Group>
-        <RootStack.Screen
-          name="Order"
-          component={OrderScreen}
-          options={{ headerShown: false }}
-        />
+        <RootStack.Screen name="Order" component={OrderScreen} />
       </RootStack.Group>
     </RootStack.Navigator>
   );
