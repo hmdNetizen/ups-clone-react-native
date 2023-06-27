@@ -8,7 +8,6 @@ import OrderScreen from "../screens/OrderScreen";
 export type RootStackParamList = {
   Main: undefined;
   MyModal: { userId: string; name: string };
-  Orders: any;
   Order: {
     order: Order;
   };
